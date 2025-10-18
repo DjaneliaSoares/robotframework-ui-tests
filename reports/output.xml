@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.11.0 on win32)" generated="2025-10-13T21:34:26.034512" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Suacedemo" source="C:\Users\Djanélia Gonçalves\OneDrive\Documents\Auto-Selenium\tests\login_suacedemo.robot">
+<test id="s1-t1" name="Login com sucesso no site SauceDemo" line="5">
+<kw name="Abrir o navegador e acessar o site" owner="login_suacedemo">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-13T21:34:26.855887" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL_SUACE}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-13T21:34:26.855887" elapsed="4.267953"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-13T21:34:31.123840" elapsed="0.153016"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:user-name</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-13T21:34:31.280800" elapsed="0.281603"/>
+</kw>
+<doc>Abre o navegador e acessa a página inicial do SauceDemo</doc>
+<status status="PASS" start="2025-10-13T21:34:26.840115" elapsed="4.722288"/>
+</kw>
+<kw name="Fazer login com credenciais válidas" owner="login_suacedemo">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-13T21:34:31.568191" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T21:34:31.566087" elapsed="0.204082"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-13T21:34:31.772328" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T21:34:31.770169" elapsed="0.178493"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-13T21:34:31.948662" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T21:34:31.948662" elapsed="0.320382"/>
+</kw>
+<doc>Preenche usuário e senha válidos e clica no botão de login</doc>
+<status status="PASS" start="2025-10-13T21:34:31.565053" elapsed="0.703991"/>
+</kw>
+<kw name="Validar redirecionamento para página de produtos" owner="login_suacedemo">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${PRODUCTS_TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-13T21:34:32.274023" elapsed="0.063507"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-13T21:34:32.373882" level="INFO">Current page contains text 'Products'.</msg>
+<arg>${PRODUCTS_TEXT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-13T21:34:32.337530" elapsed="0.036352"/>
+</kw>
+<doc>Valida que o login foi bem-sucedido e a página de produtos foi carregada</doc>
+<status status="PASS" start="2025-10-13T21:34:32.269044" elapsed="0.104838"/>
+</kw>
+<kw name="Fechar o navegador" owner="login_suacedemo">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-10-13T21:34:32.756188" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-13T21:34:32.373882" elapsed="0.382306"/>
+</kw>
+<kw name="Pause Execution" owner="Dialogs">
+<doc>Pauses execution until user clicks ``Ok`` button.</doc>
+<status status="PASS" start="2025-10-13T21:34:32.756188" elapsed="305.185745"/>
+</kw>
+<doc>Faz uma Capture da página e fecha o navegador</doc>
+<status status="PASS" start="2025-10-13T21:34:32.373882" elapsed="305.569281"/>
+</kw>
+<doc>Teste que valida o login e o redirecionamento para a página de produtos</doc>
+<status status="PASS" start="2025-10-13T21:34:26.840115" elapsed="311.106976"/>
+</test>
+<status status="PASS" start="2025-10-13T21:34:26.040081" elapsed="311.910573"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Suacedemo" id="s1" pass="1" fail="0" skip="0">Login Suacedemo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
